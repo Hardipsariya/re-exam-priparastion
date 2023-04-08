@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="s1">
+        <option value=""></option>
+    </select>
+</body>
+<script>
+    // fetch("https://gorest.co.in/public/v2/users").then((response) => { return response.json(); 
+    // }).then((data) => {
+
+    //         let drodata = "";
+
+    //         data.map((newval) => {
+    //             drodata += `<option>${newval.id},${newval.name}</option>`;
+    //         });
+
+    //     document.getElementById("s1").innerHTML = drodata;
+    //     }).catch((error) => {
+    //         alert("somthing is wrong")
+    //     })  
+
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer 5b4840c4797ec945735ee02f7bca6d76d1da4aad1fb00cf275ffde02a10eec94");
+
+    var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch("https://gorest.co.in/public/v2/users", requestOptions)
+        .then(response => { return response.text() })
+        .then(data => {
+            var newdata = "";
+
+            data.map((newval) => {
+                drodata += `<option>${newval.id},${newval.name}</option>`;
+            });
+            
+            console.log(drodata);
+            // document.getElementById("s1").innerHTML = drodata;
+        });
+
+    // for post data
+
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer 5b4840c4797ec945735ee02f7bca6d76d1da4aad1fb00cf275ffde02a10eec94");
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch("https://gorest.co.in/public/v2/users/id/posts", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result));
+        
+
+
+
+
+</script>

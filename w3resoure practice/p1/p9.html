@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a=[0,1,-2,3,5,99,NaN,7,8,null,"''",7,6,'false',11,'undefined']
+
+    for (let i = 0; i < a.length; i++) {
+        if (typeof a[i]=="number" && a[i]!=0 && a[i]!="NaN") {
+            console.log("this is number"+a[i]);
+        }
+        // else{
+        //     console.log("this is not numer");
+        // }
+        
+    }
+</script>
+</html>

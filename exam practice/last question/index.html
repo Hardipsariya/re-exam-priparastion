@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="div2">
+
+</div>
+</body>
+<script>
+    var a = [{
+
+        "username": "john",
+
+        "firstName": "John",
+
+        "lastName": "Doe",
+
+        "gender": "Male",
+
+        "profileURL": "img/male.png",
+
+        "email": "john.doe@example.com"
+
+    },
+
+    {
+
+        "username": "jane",
+
+        "firstName": "Jane",
+
+        "lastName": "Doe",
+
+        "gender": "Female",
+
+        "profileURL": "img/female.png",
+
+        "email": "jane.doe@example.com"
+
+    }
+
+    ]
+     
+    var b="";
+    for (let i = 0; i < a.length; i++) {
+         b +=`
+         <div>${a[i].username}</div>
+         <div>${a[i].email}</div>
+         
+         `
+        
+    }
+    $("#div2").append(b);
+</script>
+
+</html>

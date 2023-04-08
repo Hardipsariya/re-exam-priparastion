@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Start Time</label>
+    <input type="text" id="in1" placeholder="Start Time"> <br><br>
+    <label for="">End Time</label>
+    <input type="text" id="in2" placeholder="End Time"><br><br>
+    <label for="">Per Hour Rate</label>
+    <input type="text" id="in3" placeholder="Per Hour Rate"><br><br>
+    <label for="">Overtime multiplier</label>
+    <input type="text" id="in4" placeholder="Overtime multiplier"><br><br>
+    <button id="btn">SUBMIT</button>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            var stime = $("#in1").val();
+            var endtime = $("#in2").val();
+            var phr = $("#in3").val();
+            var overtimerate = $("#in4").val();
+            
+           
+
+
+
+
+            if (stime<9 || endtime > 17) {
+                var overtime = endtime - stime;
+                var fovertime = overtime - 8;
+                console.log("overtime");
+
+                console.log("total over time :- " + fovertime);
+
+                var ernedovertime=fovertime*phr*overtimerate;
+                console.log(ernedovertime);
+
+                if(stime<9){
+                    var bover= 9-stime;
+                }
+                if(endtime>17){
+                    var afover=endtime-17
+                }
+
+               
+            }
+            else if (stime >= 9 && endtime <= 17) {
+                console.log("reguler time");
+                var regulertime = endtime - stime;
+                var erned=regulertime*phr;
+                console.log(erned);
+
+                
+            }
+
+            
+
+        });
+
+    });
+</script>
+
+</html>
+
+
+
+
+
+

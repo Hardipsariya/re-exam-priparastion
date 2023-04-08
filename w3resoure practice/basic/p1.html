@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a= new Date();
+   var b=a.getDay();
+ 
+
+   var daylist= ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+
+   console.log("todays is "+" "+daylist[b]);
+
+
+   var  c=a.getHours();
+   var d=a.getMinutes();
+   var e=a.getSeconds();
+
+   if(c>12){
+    console.log("currunt time is " + c+"PM"+d+":"+e+":");
+   }
+   else{
+    console.log("currunt time is :"+ " "+ c+"AM"+" :"+d+" "+":"+e);
+   }
+</script>
+</html>

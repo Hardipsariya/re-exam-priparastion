@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a id="link1">Add a Contact</a>
+    <div id="div1">
+
+    </div>
+    <div id="div2">
+
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#link1").click(function () {
+            $("#div1").append(`<input type="text" placeholder="enter contect"> <button id="inbtn1" >X</button> <br> <input type="text" placeholder="how many text box you want" id="in2"><button id="inbtn2" >Add a Contact</button>`);
+            
+            $("#inbtn1").click(function () {
+                $("input").hide();
+                $("button").hide();
+            });
+
+            $("#inbtn2").click(function(){
+                var a=$("#in2").val();
+               for (let i = 0; i < a; i++) {
+                $("#div2").append(`<input type="text" placeholder="enter contect"> <br>`);
+                
+               }
+                
+            });
+
+        });
+    });
+</script>
+
+</html>

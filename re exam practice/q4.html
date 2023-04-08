@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+ 
+        <label >Please select your technology</label><br><br>
+        <input type="radio" name="technology" id="in1" value="PHP"><label for="in1">PHP</label>
+        <input type="radio" name="technology" id="in2" value="ASP.NET"><label for="in2">ASP.NET</label>
+        <input type="radio" name="technology" id="in3" value="ASP"><label for="in3">ASP</label>
+        <input type="radio" name="technology" id="in4" value="JSP"><label for="in4">JSP</label>
+        <input type="radio" name="technology" id="in5" value="PERL"><label for="in5">PERL</label>
+        <input type="radio" name="technology" id="in6" value="Cold Fusion"><label for="in6">Cold Fusion</label>
+        <input type="radio" name="technology" id="in7" value="Other"><label for="in7">Other</label>
+        <button onclick="btn()">submit</button>
+
+        <p id="p1"></p>
+</body>
+<script>
+    function btn(){
+        var a= document.getElementsByName("technology");
+        for(i=0;i<a.length;i++){
+            if(a[i].checked){
+                    document.getElementById("p1").innerHTML="You have selected : "  +a[i].value;
+            }
+
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">"Please enter first number : "</label><br>
+    <input type="text" id="in1"><br>
+    <label for="">"Please enter second number : " </label><br>
+    <input type="text" id="in2"><br> <br>
+    <label for=""> "Please select operation you want to perform : "</label><br>
+    <input type="radio" name="math" id="add"><label for="add">Addition</label> <br>
+    <input type="radio" name="math" id="Sub"><label for="Sub">Subtraction</label> <br>
+    <input type="radio" name="math" id="Mul"><label for="Mul">Multiplication</label> <br>
+    <input type="radio" name="math" id="Div"><label for="Div">Division</label> <br>
+    <button onclick="cal()">Calculet</button> <button onclick="reset()">Reset</button> <br> <br> <br>
+
+    <label for="">RESULT IS:</label>
+    <p id="p1"></p>
+</body>
+<script>
+
+    function cal() {
+        if (document.getElementsByTagName("radio").checked) {
+            var a = parseInt(document.getElementById("in1").value);
+            var b = parseInt(document.getElementById("in2").value);
+
+            if (a.toLowerCase() == a.toUpperCase() && b.toLowerCase() == b.toUpperCase()) {
+
+                if (document.getElementById("add").checked) {
+                    var sum = a + b;
+
+                    document.getElementById("p1").innerHTML = sum;
+                };
+                if (document.getElementById("Sub").checked) {
+                    var sub = a - b;
+                    document.getElementById("p1").innerHTML = sub;
+                };
+                if (document.getElementById("Mul").checked) {
+                    var Mul = a * b;
+                    document.getElementById("p1").innerHTML = Mul;
+                };
+                if (document.getElementById("Div").checked) {
+                    var Div = a / b;
+                    document.getElementById("p1").innerHTML = Div;
+                }
+            }
+            else {
+                alert("plz  select option fist")
+            }
+
+        }
+        else {
+            alert("plz enter Number");
+        }
+    }
+
+
+    function reset() {
+        location.reload();
+    }
+
+
+</script>
+
+</html>

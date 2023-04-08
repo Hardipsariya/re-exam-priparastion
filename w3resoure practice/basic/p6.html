@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var a = 2000;
+    var b = 2023;
+
+    var year = [];
+
+    for (let i = a; i < b; i++) {
+        year.push(i);
+    }
+    console.log(year);   
+
+    for (let j = 0; j < year.length; j++) {
+        if (year[j] % 4 == 0 && year[j]%100!==0 || year[j]%400==0 ) {
+            console.log("the leep year is :- " + year[j]);
+        }
+        
+    }
+</script>
+
+</html>
+
+

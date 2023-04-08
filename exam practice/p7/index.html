@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1" placeholder="enter youre fist value"><br>
+    <input type="text" id="in2" placeholder="enter youre second value"><br>
+    <label for="">Please select operation you want to perform</label><br>
+    <input type="radio" name="ope" id="add">add <br>
+    <input type="radio" name="ope" id="sub">sub <br>
+    <input type="radio" name="ope" id="mul">mul <br>
+    <input type="radio" name="ope" id="div">div <br>
+    <button onclick="res()">show result</button>
+    <p id="p1"></p>
+</body>
+<script>
+    function res(){
+        var x=parseFloat(document.getElementById("in1").value);
+        var y=parseFloat(document.getElementById("in2").value);
+
+        var sum=document.getElementById("add").innerHTML=x+y;
+        var sub1= document.getElementById("sub").innerHTML=x-y;
+        var maul1= document.getElementById("mul").innerHTML=x*y;
+        var div1= document.getElementById("div").innerHTML=x/y;
+
+
+        if(document.getElementById("add").checked==true){
+            document.getElementById("p1").innerHTML=("youre sum is "+ sum)
+        }
+        else  if(document.getElementById("sub").checked==true){
+            document.getElementById("p1").innerHTML=("youre sum is "+ sub1)
+        }
+        else  if(document.getElementById("mul").checked==true){
+            document.getElementById("p1").innerHTML=("youre sum is "+ maul1)
+        }
+        else  if(document.getElementById("div").checked==true){
+            document.getElementById("p1").innerHTML=("youre sum is "+ div1)
+        }
+        
+    }
+
+</script>
+</html>

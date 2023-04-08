@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>select youre County</div>
+    <br>
+
+    <div>
+        <select name="" id="s1">
+            <option value="--Please select--">--Please select--</option>
+            <option value="India">India</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Australia">Australia</option>
+            <option value="Germany">Germany</option>
+        </select>
+    </div>
+    <p>Your Selected Country : </p>
+    <div>
+        
+        <p id="p1"></p>
+    </div>
+    <div>
+        <p id="allc">India,United Kingdom,Switzerland,Australia,Germany</p>
+    </div>
+    
+</body>
+<script>
+    $(document).ready(function () {
+        $("#allc").show();
+        $("select").click(function () {
+            $("#allc").hide();
+            var a = document.getElementById("s1");
+            var b = a.options[a.selectedIndex].value;
+            document.getElementById("p1").innerHTML=b;
+            
+
+            if(b=='--Please select--'){
+                $("#p1").hide();
+                $("#allc").show();
+            }
+        })
+    })
+</script>
+
+</html>

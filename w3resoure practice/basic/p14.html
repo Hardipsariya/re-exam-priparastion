@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var a = "hello world i am back";
+    var c=4;
+    var part1 = a.substring(0, c)
+    console.log(part1);
+    var part2 = a.substring(c + 1, a.length)
+    console.log(part2);
+    var final = part1 + part2;
+    console.log(final);
+
+
+    var str="JaVa ia best";
+    var str1=str.substring(0,4);
+    var str2=str1.toLowerCase();
+
+    if(str2=="java"){
+        console.log("this string start with JAVA so TRUE");
+    }
+    else{
+        console.log("this string is not starting with JAVA so FALSE")
+    }
+
+
+    var in1=49;
+    var r1=50;
+    var r2=99;
+    var rarray=[]
+    for (let i = r1; i <r2; i++) {
+       rarray.push(i);
+        
+    }
+
+    for (let j = 0; j < rarray.length; j++) {
+       if(in1==rarray[j]){
+        console.log(in1+" number is bettwing 50 to 99");
+       }
+        else{
+            console.log("number is not in range of 50 to 99");
+        }
+    }
+</script>
+
+</html>

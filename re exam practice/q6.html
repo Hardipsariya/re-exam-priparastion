@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Country</label> <br> <br>
+    <input type="checkbox" name="cty" id="in1"><label for="">USA</label>
+    <input type="checkbox" name="cty" id="in2"><label for="">UK</label>
+    <input type="checkbox" name="cty" id="in3"><label for="">India</label>
+    <input type="checkbox" name="cty" id="in4"><label for="">Asia Pacific</label>
+    <input type="checkbox" name="cty" id="in5"><label for="">Ausralia</label>
+    <input type="checkbox" name="cty" id="in6"><label for="">Middel East</label> <br> <br>
+    <button onclick="sub()">submit</button>
+    <button onclick="cheAll()">Check All</button>
+    <button onclick="Un_check()">Un-Check All</button>
+</body>
+<script>
+function cheAll(){
+    var a=document.getElementsByName("cty");
+    for (let i = 0; i < a.length; i++) {
+       a[i].checked=true;
+        
+    }
+};
+
+function Un_check(){
+    var a=document.getElementsByName("cty");
+    for (let i = 0; i < a.length; i++) {
+       a[i].checked=false;
+        
+    }
+}
+</script>
+</html> 

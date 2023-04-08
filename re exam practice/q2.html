@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="in1">
+    <button onclick="btn1()">click</button>
+    <button onclick="history.back()">Go BAck</button>
+</body>
+<script>
+    function btn1() {
+        var a = document.getElementById("in1").value;
+        let reg=/[0-9]/g;
+        let result=reg.test(a);
+
+        console.log(result);
+        if (a !== "") {
+            if (result==true) {
+                alert("Entered value is a numeric value");
+                console.log(a);
+            }
+            else {
+                alert("given value is not numeric");
+            }
+        }
+        else {
+           alert("Only numeric values are allowed. Please re-enter the value");
+        };
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        // let reguler = /hardip/gi;
+        
+        // let str="harDip sariya is very good boy ";
+        
+        // // let result=reguler.exec(str);
+        // // console.log (result);
+
+        // let result1=str.replace(reguler,"HARDIP");
+        // console.log(result1);
+    }
+</script>
+
+</html>

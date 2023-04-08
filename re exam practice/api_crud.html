@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <div id="form">
+
+        <input type="text" placeholder="Name" id="fullname">
+
+        <input type="email" placeholder="Email" id="email">
+
+        <label for="" style="margin-left: 20px; font-size: 30px;">Gender</label>
+        <input type="radio" name="gende" id="gender" value="male">Male
+        <input type="radio" name="gende" id="gender" value="femail">Female
+
+        <label for="" style="margin-left: 20px; font-size: 30px;">Status</label>
+        <input type="radio" name="status" id="status" value="active">Active
+        <input type="radio" name="status" id="status" value="inactive">Inactive
+
+        <button id="postbtn">POST</button>
+        <button id="updatebtn">UPDATE</button>
+
+</body>
+<script>
+    var settings = {
+        "url": "https://fakestoreapi.com/products",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+            "Authorization": "Bearer 5b4840c4797ec945735ee02f7bca6d76d1da4aad1fb00cf275ffde02a10eec94"
+        },
+    };
+    $("tbody").html(` <tr>
+                <td>id</td>
+                <td>Name</td>
+                <td>email</td>
+                <td>gender</td>
+                <td>status</td>
+                <td>Edit</td>
+            </tr>`)
+
+
+    $.ajax(settings).done(function (apidata) {
+        $.each(apidata, function (key, value) {
+            $("tbody").append("<tr><td>" + value.id + "</td>" + "<td>" + value.title + "</td>")
+        })
+    });
+
+    $("postbtn").click(function () {
+        var a = ("#fullname").val();
+        var b = ("#email").val();
+        var c = ("input[name='gender']:checked").val();
+        var d = ("input[name='status']:checked").val();
+
+        var settings = {
+            "url": "https://fakestoreapi.com/products",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Authorization": "Bearer 5b4840c4797ec945735ee02f7bca6d76d1da4aad1fb00cf275ffde02a10eec94"
+            },
+            "data":JSON.stringify({
+                "id":a,
+                "title":b,
+                "description":c
+            })
+        };
+        
+
+        $.ajax(settings).done(function (response) {
+            alert("data posted")
+        });
+    })
+</script>
+
+</html>
